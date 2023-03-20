@@ -47,6 +47,7 @@ function pageLoad() {
     ul.classList.add("nav__list");
     ul.append(home);
     ul.append(menu);
+    ul.append(about);
     ul.append(reservations);
     ul.append(contact);
 
@@ -68,7 +69,7 @@ function pageLoad() {
     title.textContent = "Welcome to Restaurant Name";
     title.classList.add("main__title", "page-title");
 
-    image.src = "path/to/image.jpg";
+    image.src = "../dist/assets/bg1.jpg";
     image.alt = "Restaurant Name";
     image.classList.add("main__image");
 

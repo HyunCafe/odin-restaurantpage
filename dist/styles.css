@@ -69,10 +69,12 @@ ul {
 /* Footer styles */
 footer {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  line-height: 2;
+  font-size: 0.7rem;
+  width: 55%;
+  margin: 0 auto;
 }
 
 .footer-column {
@@ -87,5 +89,9 @@ footer {
 }
 
 h4 {
-    font-weight: 900;
+  font-weight: 900;
+}
+
+footer a[href] {
+  text-decoration: underline;
 }
