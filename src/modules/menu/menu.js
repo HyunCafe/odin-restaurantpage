@@ -1,3 +1,5 @@
+import { createHeader, createFooter } from './pageLoad';
+
 function menu() {
 
 

@@ -1,3 +1,3 @@
-import pageLoad from './pageLoad';
+import pageLoad, { createHeader, createFooter } from './pageLoad';
 
 pageLoad();

@@ -100,7 +100,7 @@ function pageLoad() {
       staggeredItem.classList.add("staggered-item");
 
       const image = document.createElement("img");
-      image.src = `../dist/assets/bg${i}.jpg`;
+      image.src = `../src/assets/bg${i}.jpg`;
       image.alt = "Restaurant Name";
       image.classList.add("staggered-image");
 
@@ -208,7 +208,6 @@ function pageLoad() {
   content.append(createFooter());
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (pageLoad);
-
 
 /***/ })
 

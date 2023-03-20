@@ -19,7 +19,7 @@ ul {
   padding: 0;
 }
 
-/* Header styles */
+/* --------------------------------- Header styles ------------------------------------ */
 .header {
   background-color: #333;
   color: #fff;
@@ -46,7 +46,7 @@ ul {
   transition: color 0.3s;
 }
 
-/* Main content styles */
+/* --------------------------------- Main content styles ------------------------------ */
 .main {
   padding: 2rem;
   text-align: center;
@@ -89,7 +89,14 @@ ul {
   text-align: center;
 }
 
-/* Footer styles */
+/* --------------------------------- Menu styles ---------------------------------- */
+/* --------------------------------- About styles --------------------------------- */
+/* --------------------------------- Reservations styles -------------------------- */
+/* --------------------------------- Contact styles ------------------------------- */
+
+
+/* --------------------------------- Footer styles -------------------------------- */
+
 footer {
   display: flex;
   justify-content: space-around;
