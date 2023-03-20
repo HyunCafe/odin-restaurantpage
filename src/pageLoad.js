@@ -1,4 +1,5 @@
 function pageLoad() {
+  // ---------------------------------------------- HEADER SECTION ---------------------------------------------- //
   function createHeader() {
     const header = document.createElement("header");
     const nav = document.createElement("nav");
@@ -60,38 +61,62 @@ function pageLoad() {
     return header;
   }
 
+  // ---------------------------------------------- MAIN SECTION ---------------------------------------------- //
   function createMain() {
     const main = document.createElement("main");
     const title = document.createElement("h1");
-    const image = document.createElement("img");
-    const content = document.createElement("p");
 
     title.textContent = "Welcome to Restaurant Name";
     title.classList.add("main__title", "page-title");
 
-    image.src = "../dist/assets/bg1.jpg";
-    image.alt = "Restaurant Name";
-    image.classList.add("main__image");
-
-    content.textContent = "We serve the finest cuisine in the city.";
-    content.classList.add("main__content", "page-content");
-
     main.classList.add("main");
     main.append(title);
-    main.append(image);
-    main.append(content);
+
+    const staggeredContainer = document.createElement("div");
+    staggeredContainer.classList.add("staggered-container");
+
+    const texts = [
+      "We serve the finest cuisine in the city.",
+      "Our restaurant offers a unique dining experience.",
+      "Enjoy our exquisite dishes in a warm and welcoming atmosphere.",
+    ];
+
+    for (let i = 1; i <= 3; i++) {
+      const staggeredItem = document.createElement("div");
+      staggeredItem.classList.add("staggered-item");
+
+      const image = document.createElement("img");
+      image.src = `../dist/assets/bg${i}.jpg`;
+      image.alt = "Restaurant Name";
+      image.classList.add("staggered-image");
+
+      const staggeredText = document.createElement("div");
+      staggeredText.classList.add("staggered-text");
+      staggeredText.textContent = texts[i - 1];
+
+      if (i % 2 === 0) {
+        staggeredItem.style.flexDirection = "row-reverse";
+      }
+
+      staggeredItem.append(image);
+      staggeredItem.append(staggeredText);
+      staggeredContainer.append(staggeredItem);
+    }
+
+    main.append(staggeredContainer);
 
     return main;
   }
 
+  // ---------------------------------------------- HEADER SECTION ---------------------------------------------- //
   function createFooter() {
     const footer = document.createElement("footer");
 
     const column1 = createFooterColumn(
       [
         "Contact",
-        "Reserved",
-        "Rehoover 23",
+        "Sushi Place",
+        "Washington St 23",
         "1234 COPENHAGEN K",
         "SEE MAP",
         "+12 34 56 78",

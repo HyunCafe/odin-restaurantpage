@@ -55,15 +55,38 @@ ul {
 
 .main__title {
   font-size: 2rem;
-}
-
-.main__image {
-  max-width: 100%;
-  height: auto;
+  margin-bottom: 1em;
 }
 
 .main__content {
   font-size: 1rem;
+}
+
+.staggered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.staggered-item {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.staggered-image {
+  width: 70%;
+  max-height: 700px;
+  object-fit: cover;
+}
+
+.staggered-text {
+  width: 50%;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 /* Footer styles */
