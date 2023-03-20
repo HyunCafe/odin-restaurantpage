@@ -156,16 +156,12 @@ function pageLoad() {
       const a = document.createElement(element);
       a.textContent = item;
 
-      if (
-        (className === "footer-column-3" ||
-          className === "footer-column-4" ||
-          className === "footer-column-5") &&
-        (item === "SEE MAP" || item === "food@food.co")
-      ) {
-        a.href =
-          item === "SEE MAP"
-            ? "https://example.com/map"
-            : "mailto:food@food.co";
+      if (className === "footer-column-1") {
+        if (item === "food@food.co") {
+          a.href = "mailto:food@food.co";
+        } else if (item === "SEE MAP") {
+          a.href = "#";
+        }
       } else if (
         className === "footer-column-3" ||
         className === "footer-column-4" ||
