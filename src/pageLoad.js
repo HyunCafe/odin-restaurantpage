@@ -193,4 +193,5 @@ function pageLoad() {
   content.append(createMain());
   content.append(createFooter());
 }
+export { createHeader, createFooter };
 export default pageLoad;
