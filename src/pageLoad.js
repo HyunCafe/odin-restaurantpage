@@ -1,11 +1,12 @@
 function pageLoad() {
-    console.log('hello')
   function createHeader() {
     const header = document.createElement("header");
     const nav = document.createElement("nav");
     const ul = document.createElement("ul");
     const home = document.createElement("li");
     const homeLink = document.createElement("a");
+    const about = document.createElement("li");
+    const aboutLink = document.createElement("a");
     const menu = document.createElement("li");
     const menuLink = document.createElement("a");
     const reservations = document.createElement("li");
@@ -24,6 +25,12 @@ function pageLoad() {
     menu.classList.add("nav__item");
     menuLink.classList.add("nav__link");
     menu.append(menuLink);
+
+    aboutLink.href = "#";
+    aboutLink.textContent = "About";
+    about.classList.add("nav__item");
+    aboutLink.classList.add("nav__link");
+    about.append(aboutLink);
 
     reservationsLink.href = "#";
     reservationsLink.textContent = "Reservations";
@@ -78,69 +85,85 @@ function pageLoad() {
 
   function createFooter() {
     const footer = document.createElement("footer");
-    const p = document.createElement("p");
-    const ul = document.createElement("ul");
-    const terms = document.createElement("li");
-    const termsLink = document.createElement("a");
-    const privacy = document.createElement("li");
-    const privacyLink = document.createElement("a");
-    const cookie = document.createElement("li");
-    const cookieLink = document.createElement("a");
-    const socialMedia = document.createElement("div");
-    const facebook = document.createElement("a");
-    const twitter = document.createElement("a");
-    const instagram = document.createElement("a");
 
-    footer.classList.add("footer");
+    const column1 = createFooterColumn(
+      [
+        "Contact",
+        "Reserved",
+        "Rehoover 23",
+        "1234 COPENHAGEN K",
+        "SEE MAP",
+        "+12 34 56 78",
+        "food@food.co",
+      ],
+      "footer-column-1"
+    );
+    const column2 = createFooterColumn(
+      [
+        "Hours",
+        "TUESDAY - THURSDAY",
+        "17:00 – 23:00",
+        "FRIDAY",
+        "12:30 – 17:30, 18:00 – 23:30",
+        "SATURDAY, SUNDAY, MONDAY",
+        "CLOSED",
+      ],
+      "footer-column-2"
+    );
 
-    p.classList.add("footer__text", "footer-text");
-    p.textContent = "2023 Company Name";
+    const column3 = createFooterColumn(
+      ["Careers", "JOIN OUR TEAM"],
+      "footer-column-3"
+    );
+    const column4 = createFooterColumn(
+      ["About", "PRIVACY POLICY", "TERMS OF USE", "HEALTH INSPECTION REPORT"],
+      "footer-column-4"
+    );
+    const column5 = createFooterColumn(
+      ["Follow", "ANNOUNCEMENTS", "NEWSLETTER", "INSTAGRAM", "TWITTER"],
+      "footer-column-5"
+    );
 
-    ul.classList.add("footer__links", "footer-links");
-
-    termsLink.href = "#";
-    termsLink.textContent = "Terms of Service";
-    terms.classList.add("footer-links__item", "footer-item");
-    termsLink.classList.add("footer-links__link", "footer-link");
-    terms.append(termsLink);
-    ul.append(terms);
-
-    privacyLink.href = "#";
-    privacyLink.textContent = "Privacy Policy";
-    privacy.classList.add("footer-links__item", "footer-item");
-    privacyLink.classList.add("footer-links__link", "footer-link");
-    privacy.append(privacyLink);
-    ul.append(privacy);
-
-    cookieLink.href = "#";
-    cookieLink.textContent = "Cookie Policy";
-    cookie.classList.add("footer-links__item", "footer-item");
-    cookieLink.classList.add("footer-links__link", "footer-link");
-    cookie.append(cookieLink);
-    ul.append(cookie);
-
-    socialMedia.classList.add("footer__social-media", "social-media");
-
-    facebook.href = "#";
-    facebook.textContent = "Facebook";
-    facebook.classList.add("social-media__link", "social-link");
-    socialMedia.append(facebook);
-
-    twitter.href = "#";
-    twitter.textContent = "Twitter";
-    twitter.classList.add("social-media__link", "social-link");
-    socialMedia.append(twitter);
-
-    instagram.href = "#";
-    instagram.textContent = "Instagram";
-    instagram.classList.add("social-media__link", "social-link");
-    socialMedia.append(instagram);
-
-    footer.append(p);
-    footer.append(ul);
-    footer.append(socialMedia);
+    footer.append(column1);
+    footer.append(column2);
+    footer.append(column3);
+    footer.append(column4);
+    footer.append(column5);
 
     return footer;
+  }
+
+  function createFooterColumn(items, className) {
+    const column = document.createElement("div");
+    column.classList.add("footer-column", className);
+
+    items.forEach((item, index) => {
+      const element = index === 0 ? "h4" : "a";
+      const a = document.createElement(element);
+      a.textContent = item;
+
+      if (
+        (className === "footer-column-3" ||
+          className === "footer-column-4" ||
+          className === "footer-column-5") &&
+        (item === "SEE MAP" || item === "food@food.co")
+      ) {
+        a.href =
+          item === "SEE MAP"
+            ? "https://example.com/map"
+            : "mailto:food@food.co";
+      } else if (
+        className === "footer-column-3" ||
+        className === "footer-column-4" ||
+        className === "footer-column-5"
+      ) {
+        a.href = "#";
+      }
+
+      column.append(a);
+    });
+
+    return column;
   }
 
   const content = document.querySelector("#content");
