@@ -14,6 +14,7 @@ export const createHeader = () => {
   const contact = document.createElement("li");
   const contactLink = document.createElement("a");
 
+
   homeLink.href = "#";
   homeLink.textContent = "Home";
   home.classList.add("nav__item");
@@ -51,14 +52,20 @@ export const createHeader = () => {
   ul.append(reservations);
   ul.append(contact);
 
+
+
   nav.classList.add("header__nav", "nav");
   nav.append(ul);
+
+
 
   header.classList.add("header");
   header.append(nav);
 
   return header;
 };
+
+
 
 // ---------------------------------------------- MAIN SECTION ---------------------------------------------- //
 export const createMain = () => {
