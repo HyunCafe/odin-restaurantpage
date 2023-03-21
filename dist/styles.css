@@ -3,12 +3,12 @@
 /* General styles */
 :root {
   font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 body {
   line-height: 1.6;
-  color: #4e3a12;
+  color: rgba(0, 0, 0, 0.8);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -60,7 +60,7 @@ ul {
 
 .main__title {
   font-size: 2rem;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 .main__content {
@@ -81,6 +81,7 @@ ul {
   align-items: center;
   margin-bottom: 2rem;
   position: relative;
+  animation: slide-in 1s ease-in-out forwards;
 }
 
 .staggered-item::before {
@@ -93,11 +94,11 @@ ul {
   bottom: 0;
   background: rgba(255, 239, 207, 0.6);
   z-index: -1;
-  transform: translateY(-19%) translateX(-24%) scale(0.7);
+  transform: translateY(-19%) translateX(-21%) scale(0.7);
 }
 
 .staggered-item:nth-child(odd)::before {
-  transform: translateY(-19%) translateX(19%) scale(0.7);
+  transform: translateY(-19%) translateX(21%) scale(0.7);
 }
 
 .staggered-image {
@@ -106,6 +107,16 @@ ul {
   object-fit: cover;
   background: #e0e0e0;
   box-shadow: 7px 7px 20px #7d5e1e, -7px -7px 20px #7d5e1e;
+  animation: slide-in 1s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-2%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .staggered-text {
@@ -257,7 +268,8 @@ footer {
 }
 
 h4 {
-  font-weight: 900;
+  font-weight: bold;
+  font-size: .9rem;
 }
 
 footer a[href] {
