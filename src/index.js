@@ -1,39 +1,48 @@
-import pageLoad, { createHeader, createFooter } from "./pageLoad";
+import { createHeader, createMain, createFooter } from "./pageLoad.js";
 
-pageLoad();
-
-const navLinks = document.querySelectorAll("nav a");
-navLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    switch (link.textContent.toLowerCase()) {
-      case "home":
-        import("./main.js").then((module) => {
-          module.default();
-        });
-        break;
-      case "menu":
-        import("./menu.js").then((module) => {
-          module.default();
-        });
-        break;
-      case "about":
-        import("./about.js").then((module) => {
-          module.default();
-        });
-        break;
-      case "reservations":
-        import("./reservations.js").then((module) => {
-          module.default();
-        });
-        break;
-      case "contact":
-        import("./contact.js").then((module) => {
-          module.default();
-        });
-        break;
-      default:
-        break;
-    }
+const setupEventListeners = () => {
+  const navLinks = document.querySelectorAll("nav a");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const content = document.querySelector("#content");
+      content.innerHTML = "";
+      switch (link.textContent.toLowerCase()) {
+        case "home":
+          content.append(createHeader());
+          content.append(createMain());
+          content.append(createFooter());
+          setupEventListeners();
+          break;
+        case "menu":
+          import("./modules/menu.js").then((module) => {
+            content.append(module.default());
+            setupEventListeners();
+          });
+          break;
+        case "about":
+          import("./modules/about.js").then((module) => {
+            content.append(module.default());
+            setupEventListeners();
+          });
+          break;
+        case "reservations":
+          import("./modules/reservations.js").then((module) => {
+            content.append(module.default());
+            setupEventListeners();
+          });
+          break;
+        case "contact":
+          import("./modules/contact.js").then((module) => {
+            content.append(module.default());
+            setupEventListeners();
+          });
+          break;
+        default:
+          break;
+      }
+    });
   });
-});
+};
+
+setupEventListeners();

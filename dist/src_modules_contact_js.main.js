@@ -1,11 +1,25 @@
-import pageLoad, { createHeader, createFooter } from "../pageLoad";
+"use strict";
+(self["webpackChunkodin_restaurantpage"] = self["webpackChunkodin_restaurantpage"] || []).push([["src_modules_contact_js"],{
+
+/***/ "./src/modules/contact.js":
+/*!********************************!*\
+  !*** ./src/modules/contact.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _pageLoad__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../pageLoad */ "./src/pageLoad.js");
+
 
 function contact() {
   const contactSection = document.createElement("section");
   contactSection.className = "contact";
 
   // Append the header
-  contactSection.append(createHeader());
+  contactSection.append((0,_pageLoad__WEBPACK_IMPORTED_MODULE_0__.createHeader)());
 
   const header = document.createElement("h1");
   header.className = "contact__header";
@@ -79,8 +93,14 @@ function contact() {
   contactSection.append(map);
 
   // Append the footer
-  contactSection.append(createFooter());
+  contactSection.append((0,_pageLoad__WEBPACK_IMPORTED_MODULE_0__.createFooter)());
 
   return contactSection;
 }
-export default contact;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (contact);
+
+
+/***/ })
+
+}]);
+//# sourceMappingURL=src_modules_contact_js.main.js.map

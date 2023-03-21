@@ -147,6 +147,7 @@ ul {
   justify-content: space-between;
   width: 50%;
   margin: 0 auto;
+  
 }
 
 .contact__form {
@@ -194,7 +195,6 @@ ul {
 }
 
 .contact__text a {
-  color: blue;
   text-decoration: underline;
 }
 
@@ -205,7 +205,6 @@ ul {
 }
 
 .contact__social-media-link {
-  color: blue;
 }
 
 /* Map Portion */
