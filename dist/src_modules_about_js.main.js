@@ -15,15 +15,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function about() {
+  const aboutSection = document.createElement("section");
+  aboutSection.className = "about";
+
   // Append the header
-  contactSection.appendChild((0,_pageLoad__WEBPACK_IMPORTED_MODULE_0__.createHeader)());
+  aboutSection.appendChild((0,_pageLoad__WEBPACK_IMPORTED_MODULE_0__.createHeader)());
 
-  
   // Append the footer
-  contactSection.appendChild((0,_pageLoad__WEBPACK_IMPORTED_MODULE_0__.createFooter)());
+  aboutSection.appendChild((0,_pageLoad__WEBPACK_IMPORTED_MODULE_0__.createFooter)());
 
+  return aboutSection;
 }
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (about);
+
 
 /***/ })
 

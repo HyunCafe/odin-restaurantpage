@@ -15,15 +15,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function menu() {
+  const menuSection = document.createElement("section");
+  menuSection.className = "menu";
+
   // Append the header
-  contactSection.appendChild((0,_pageLoad__WEBPACK_IMPORTED_MODULE_0__.createHeader)());
+  menuSection.appendChild((0,_pageLoad__WEBPACK_IMPORTED_MODULE_0__.createHeader)());
 
-  
   // Append the footer
-  contactSection.appendChild((0,_pageLoad__WEBPACK_IMPORTED_MODULE_0__.createFooter)());
+  menuSection.appendChild((0,_pageLoad__WEBPACK_IMPORTED_MODULE_0__.createFooter)());
 
+  return menuSection;
 }
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (menu);
+
 
 /***/ })
 

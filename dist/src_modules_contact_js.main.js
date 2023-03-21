@@ -21,7 +21,7 @@ function createForm() {
   const label = document.createElement("label");
   label.textContent =
     "Have a comment, critique or suggestion? We’d love to hear from you.";
-  form.appendChild(label);
+  form.append(label);
 
   const nameInput = document.createElement("input");
   nameInput.type = "text";
@@ -29,7 +29,7 @@ function createForm() {
   nameInput.id = "name";
   nameInput.placeholder = "NAME";
   nameInput.required = true;
-  form.appendChild(nameInput);
+  form.append(nameInput);
 
   const emailInput = document.createElement("input");
   emailInput.type = "email";
@@ -37,18 +37,18 @@ function createForm() {
   emailInput.id = "email";
   emailInput.placeholder = "EMAIL";
   emailInput.required = true;
-  form.appendChild(emailInput);
+  form.append(emailInput);
 
   const messageInput = document.createElement("textarea");
   messageInput.className = "contact__textarea";
   messageInput.placeholder = "MESSAGE";
   messageInput.required = true;
-  form.appendChild(messageInput);
+  form.append(messageInput);
 
   const submitButton = document.createElement("button");
   submitButton.className = "contact__submit btn btn-primary";
   submitButton.textContent = "SEND";
-  form.appendChild(submitButton);
+  form.append(submitButton);
 
   return form;
 }
@@ -62,82 +62,82 @@ function createInfo() {
   const phoneIcon = document.createElement("i");
   phoneIcon.className = "material-icons contact__icon";
   phoneIcon.textContent = "phone";
-  phoneListItem.appendChild(phoneIcon);
+  phoneListItem.append(phoneIcon);
   const phoneLink = document.createElement("a");
   phoneLink.href = "";
   phoneLink.textContent = "+12 34 56 78";
   const phoneText = document.createElement("span");
   phoneText.className = "contact__text";
-  phoneText.appendChild(phoneLink);
-  phoneListItem.appendChild(phoneText);
+  phoneText.append(phoneLink);
+  phoneListItem.append(phoneText);
 
   const emailListItem = document.createElement("li");
   emailListItem.className = "contact__item";
   const emailIcon = document.createElement("i");
   emailIcon.className = "material-icons contact__icon";
   emailIcon.textContent = "email";
-  emailListItem.appendChild(emailIcon);
+  emailListItem.append(emailIcon);
   const emailLink = document.createElement("a");
   emailLink.href = "mailto:sakuraisushi@gmail.com";
   emailLink.textContent = "sakuraisushi@gmail.com";
   const emailText = document.createElement("span");
   emailText.className = "contact__text";
-  emailText.appendChild(emailLink);
-  emailListItem.appendChild(emailText);
+  emailText.append(emailLink);
+  emailListItem.append(emailText);
 
   const facebookListItem = document.createElement("li");
   facebookListItem.className = "contact__item";
   const facebookIcon = document.createElement("i");
   facebookIcon.className = "material-icons contact__icon";
   facebookIcon.textContent = "share";
-  facebookListItem.appendChild(facebookIcon);
+  facebookListItem.append(facebookIcon);
   const facebookLink = document.createElement("a");
   facebookLink.href = "https://www.facebook.com/";
   facebookLink.target = "_blank";
   facebookLink.textContent = "Facebook";
   const facebookText = document.createElement("span");
   facebookText.className = "contact__text";
-  facebookText.appendChild(facebookLink);
-  facebookListItem.appendChild(facebookText);
+  facebookText.append(facebookLink);
+  facebookListItem.append(facebookText);
 
   const twitterListItem = document.createElement("li");
   twitterListItem.className = "contact__item";
   const twitterIcon = document.createElement("i");
   twitterIcon.className = "material-icons contact__icon";
   twitterIcon.textContent = "share";
-  twitterListItem.appendChild(twitterIcon);
+  twitterListItem.append(twitterIcon);
   const twitterLink = document.createElement("a");
   twitterLink.href = twitterLink.target = "_blank";
   twitterLink.textContent = "Twitter";
   const twitterText = document.createElement("span");
   twitterText.className = "contact__text";
-  twitterText.appendChild(twitterLink);
-  twitterListItem.appendChild(twitterText);
+  twitterText.append(twitterLink);
+  twitterListItem.append(twitterText);
 
   const instagramListItem = document.createElement("li");
   instagramListItem.className = "contact__item";
   const instagramIcon = document.createElement("i");
   instagramIcon.className = "material-icons contact__icon";
   instagramIcon.textContent = "share";
-  instagramListItem.appendChild(instagramIcon);
+  instagramListItem.append(instagramIcon);
   const instagramLink = document.createElement("a");
   instagramLink.href = "#";
   instagramLink.target = "_blank";
   instagramLink.textContent = "Instagram";
   const instagramText = document.createElement("span");
   instagramText.className = "contact__text";
-  instagramText.appendChild(instagramLink);
-  instagramListItem.appendChild(instagramText);
+  instagramText.append(instagramLink);
+  instagramListItem.append(instagramText);
 
   const ul = document.createElement("ul");
   ul.className = "contact__list";
-  ul.appendChild(phoneListItem);
-  ul.appendChild(emailListItem);
-  ul.appendChild(facebookListItem);
-  ul.appendChild(twitterListItem);
-  ul.appendChild(instagramListItem);
+  ul.append(phoneListItem);
+  ul.append(emailListItem);
+  ul.append(facebookListItem);
+  ul.append(twitterListItem);
+  ul.append(instagramListItem);
 
-  info.appendChild(ul);
+  info.append(ul);
 
   return info;
 }
@@ -161,8 +161,8 @@ function createMap() {
   addressText.className = "map__address-text";
   addressText.textContent = "123 Main Street, City, State";
 
-  address.appendChild(addressHeader);
-  address.appendChild(addressText);
+  address.append(addressHeader);
+  address.append(addressText);
 
   const mapContainer = document.createElement("div");
   mapContainer.className = "map__map-container";
@@ -178,11 +178,11 @@ function createMap() {
   mapIframe.allowfullscreen = true;
   mapIframe.loading = "lazy";
 
-  mapContainer.appendChild(mapIframe);
+  mapContainer.append(mapIframe);
 
-  map.appendChild(header);
-  map.appendChild(address);
-  map.appendChild(mapContainer);
+  map.append(header);
+  map.append(address);
+  map.append(mapContainer);
 
   return map;
 }
@@ -192,7 +192,7 @@ function contact() {
   contactSection.className = "contact";
 
   // Append the header
-  contactSection.appendChild((0,_pageLoad__WEBPACK_IMPORTED_MODULE_0__.createHeader)());
+  contactSection.append((0,_pageLoad__WEBPACK_IMPORTED_MODULE_0__.createHeader)());
 
   const header = document.createElement("h1");
   header.className = "contact__header";
@@ -200,15 +200,15 @@ function contact() {
   const wrapper = document.createElement("div");
   wrapper.className = "contact__wrapper";
 
-  wrapper.appendChild(createForm());
-  wrapper.appendChild(createInfo());
+  wrapper.append(createForm());
+  wrapper.append(createInfo());
 
-  contactSection.appendChild(header);
-  contactSection.appendChild(wrapper);
-  contactSection.appendChild(createMap());
+  contactSection.append(header);
+  contactSection.append(wrapper);
+  contactSection.append(createMap());
 
   // Append the footer
-  contactSection.appendChild((0,_pageLoad__WEBPACK_IMPORTED_MODULE_0__.createFooter)());
+  contactSection.append((0,_pageLoad__WEBPACK_IMPORTED_MODULE_0__.createFooter)());
 
   return contactSection;
 }

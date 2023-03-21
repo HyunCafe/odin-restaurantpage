@@ -1,12 +1,16 @@
-import pageLoad, { createHeader, createFooter } from "../pageLoad";
+import { createHeader, createFooter } from '../pageLoad';
 
 function menu() {
+  const menuSection = document.createElement("section");
+  menuSection.className = "menu";
+
   // Append the header
-  contactSection.appendChild(createHeader());
+  menuSection.appendChild(createHeader());
 
-  
   // Append the footer
-  contactSection.appendChild(createFooter());
+  menuSection.appendChild(createFooter());
 
+  return menuSection;
 }
+
 export default menu;

@@ -114,12 +114,11 @@ export const createFooter = () => {
   const column1 = createFooterColumn(
     [
       "Contact",
-      "Sushi Place",
-      "Washington St 23",
-      "1234 COPENHAGEN K",
+      "Sukrai Sushi",
+      "123 Main Street, City, State",
       "SEE MAP",
       "+12 34 56 78",
-      "food@food.co",
+      "sukarisushi@gmail.com",
     ],
     "footer-column-1"
   );
@@ -168,8 +167,8 @@ function createFooterColumn(items, className) {
     a.textContent = item;
 
     if (className === "footer-column-1") {
-      if (item === "food@food.co") {
-        a.href = "mailto:food@food.co";
+      if (item === "sukarisushi@gmail.com") {
+        a.href = "mailto:sukarisushi@gmail.com";
       } else if (item === "SEE MAP") {
         a.href = "#";
       }
