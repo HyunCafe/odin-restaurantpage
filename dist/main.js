@@ -80,7 +80,7 @@ function pageLoad() {
     const main = document.createElement("main");
     const title = document.createElement("h1");
 
-    title.textContent = "Welcome to Restaurant Name";
+    title.textContent = "Welcome to Sukari Sushi";
     title.classList.add("main__title", "page-title");
 
     main.classList.add("main");
@@ -90,9 +90,9 @@ function pageLoad() {
     staggeredContainer.classList.add("staggered-container");
 
     const texts = [
-      "We serve the finest cuisine in the city.",
-      "Our restaurant offers a unique dining experience.",
-      "Enjoy our exquisite dishes in a warm and welcoming atmosphere.",
+      "For 20 years, Sukari Sushi has been serving the finest cuisine in the city with a unique dining experience. Our commitment to quality is evident in every dish, using only the freshest ingredients sourced from Japan's oceans. Our expert chefs blend traditional techniques with modern innovation to create an unforgettable dining experience.",
+      "We understand the importance of atmosphere in creating a memorable dining experience. That's why we've created a warm and welcoming environment, complete with elegant aesthetics and thoughtful design. Our efforts have been recognized and awarded, making us a top choice for those seeking a one-of-a-kind dining experience.",
+      "We invite you to come and experience the art of sushi with us. Our team of dedicated professionals is looking forward to serving you the finest cuisine in the city, in a warm and welcoming atmosphere.",
     ];
 
     for (let i = 1; i <= 3; i++) {
@@ -209,6 +209,7 @@ function pageLoad() {
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (pageLoad);
 
+
 /***/ })
 
 /******/ 	});
@@ -278,6 +279,42 @@ __webpack_require__.r(__webpack_exports__);
 
 
 (0,_pageLoad__WEBPACK_IMPORTED_MODULE_0__["default"])();
+
+const navLinks = document.querySelectorAll("nav a");
+navLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    switch (link.textContent.toLowerCase()) {
+      case "home":
+        Promise.resolve().then(function webpackMissingModule() { var e = new Error("Cannot find module './main.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }).then((module) => {
+          module.default();
+        });
+        break;
+      case "menu":
+        Promise.resolve().then(function webpackMissingModule() { var e = new Error("Cannot find module './menu.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }).then((module) => {
+          module.default();
+        });
+        break;
+      case "about":
+        Promise.resolve().then(function webpackMissingModule() { var e = new Error("Cannot find module './about.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }).then((module) => {
+          module.default();
+        });
+        break;
+      case "reservations":
+        Promise.resolve().then(function webpackMissingModule() { var e = new Error("Cannot find module './reservations.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }).then((module) => {
+          module.default();
+        });
+        break;
+      case "contact":
+        Promise.resolve().then(function webpackMissingModule() { var e = new Error("Cannot find module './contact.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }).then((module) => {
+          module.default();
+        });
+        break;
+      default:
+        break;
+    }
+  });
+});
 
 })();
 

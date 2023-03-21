@@ -1,9 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
 /* General styles */
+:root {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
 
 body {
-  font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: #4e3a12;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -21,7 +26,7 @@ ul {
 
 /* --------------------------------- Header styles ------------------------------------ */
 .header {
-  background-color: #333;
+  background-color: #0a0603;
   color: #fff;
   padding: 1rem;
 }
@@ -66,6 +71,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .staggered-item {
@@ -74,12 +80,32 @@ ul {
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
+  position: relative;
+}
+
+.staggered-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 239, 207, 0.6);
+  z-index: -1;
+  transform: translateY(-19%) translateX(-24%) scale(0.7);
+}
+
+.staggered-item:nth-child(odd)::before {
+  transform: translateY(-19%) translateX(19%) scale(0.7);
 }
 
 .staggered-image {
   width: 70%;
   max-height: 700px;
   object-fit: cover;
+  background: #e0e0e0;
+  box-shadow: 7px 7px 20px #7d5e1e, -7px -7px 20px #7d5e1e;
 }
 
 .staggered-text {
@@ -94,6 +120,117 @@ ul {
 /* --------------------------------- Reservations styles -------------------------- */
 /* --------------------------------- Contact styles ------------------------------- */
 
+/* Contact us Form */
+.contact {
+  text-align: center;
+}
+
+.contact__header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2em;
+}
+
+.contact__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.contact__form {
+  width: 40%;
+}
+
+.contact__input,
+.contact__textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin: 0.5em;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact__submit {
+  width: 50%;
+  padding: 0.5em;
+  background-color: rgb(27, 27, 27);
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.contact__info {
+  width: 40%;
+  text-align: left;
+}
+
+.contact__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact__item {
+  margin-bottom: 0.5em;
+  font-size: 1.2rem;
+}
+
+.contact__icon {
+}
+
+.contact__text a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.contact__social-media {
+}
+
+.contact__social-media-item {
+}
+
+.contact__social-media-link {
+  color: blue;
+}
+
+/* Map Portion */
+.map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.map__header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.map__map-container {
+  width: 100%;
+  height: 400px;
+  border: 1px solid #ccc;
+}
+
+.map__address {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.map__address-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.map__address-text {
+  font-size: 16px;
+}
 
 /* --------------------------------- Footer styles -------------------------------- */
 
@@ -105,6 +242,7 @@ footer {
   font-size: 0.7rem;
   width: 55%;
   margin: 0 auto;
+  font-weight: 600;
 }
 
 .footer-column {
