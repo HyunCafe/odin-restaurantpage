@@ -113,10 +113,6 @@ export const createMain = () => {
     staggeredText.classList.add("staggered-text");
     staggeredText.textContent = texts[i - 1];
 
-    if (i % 2 === 0) {
-      staggeredItem.style.flexDirection = "row-reverse";
-    }
-
     staggeredItem.append(image);
     staggeredItem.append(staggeredText);
     staggeredContainer.append(staggeredItem);

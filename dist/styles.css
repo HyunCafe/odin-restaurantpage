@@ -137,6 +137,10 @@ ul {
   transform: translateY(-19%) translateX(-21%) scale(0.7);
 }
 
+.staggered-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
 .staggered-item:nth-child(odd)::before {
   transform: translateY(-19%) translateX(21%) scale(0.7);
 }
@@ -460,26 +464,42 @@ footer a[href] {
   }
 }
 
-/* --------------------------------- Footer styles --------------------------------- */
-
-/* Media queries */
+/* --------------------------------- Home styles ---------------------------------- */
 @media screen and (max-width: 480px) {
-  footer {
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    font-size: 0.6rem;
+  .main__title::before {
+    top: calc(50% + 50px);
   }
 
-  .footer-column {
-    flex-basis: calc(50% - 0.5rem);
-    align-self: center;
+  .main__title::after {
+    bottom: calc(50% + 50px);
+  }
+
+  .staggered-container {
+    flex-direction: column;
+  }
+
+  .staggered-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .staggered-item:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .staggered-image {
+    width: 100%;
+  }
+
+  .staggered-text {
+    width: 100%;
+    font-size: 1rem;
+    box-sizing: border-box;
     text-align: center;
-    margin-bottom: 0.5em;
-    height: 150px;
-    width: 150px;
   }
 }
+
 /* --------------------------------- Menu styles ---------------------------------- */
 /* --------------------------------- About styles --------------------------------- */
 /* --------------------------------- Reservations styles -------------------------- */
@@ -511,3 +531,32 @@ footer a[href] {
 }
 
 /* --------------------------------- Contact styles -------------------------- */
+
+/* --------------------------------- Footer styles --------------------------------- */
+
+/* Media queries */
+@media screen and (max-width: 480px) {
+  footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    font-size: 0.6rem;
+    margin-bottom: 3em;
+  }
+
+  .footer-column {
+    flex-basis: calc(50% - 0.7rem);
+    align-self: center;
+    text-align: center;
+    margin-bottom: 0.5em;
+    height: 170px;
+    width: 150px;
+    line-height: 23px;
+  }
+  .footer-column:nth-child(3),
+  .footer-column:nth-child(4),
+  .footer-column:nth-child(5) {
+    height: 130px;
+    line-height: 30px;
+  }
+}
