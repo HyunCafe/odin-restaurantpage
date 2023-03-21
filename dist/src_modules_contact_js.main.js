@@ -14,89 +14,205 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pageLoad__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../pageLoad */ "./src/pageLoad.js");
 
 
+function createForm() {
+  const form = document.createElement("form");
+  form.className = "contact__form";
+
+  const label = document.createElement("label");
+  label.textContent =
+    "Have a comment, critique or suggestion? We’d love to hear from you.";
+  form.appendChild(label);
+
+  const nameInput = document.createElement("input");
+  nameInput.type = "text";
+  nameInput.className = "contact__input";
+  nameInput.id = "name";
+  nameInput.placeholder = "NAME";
+  nameInput.required = true;
+  form.appendChild(nameInput);
+
+  const emailInput = document.createElement("input");
+  emailInput.type = "email";
+  emailInput.className = "contact__input";
+  emailInput.id = "email";
+  emailInput.placeholder = "EMAIL";
+  emailInput.required = true;
+  form.appendChild(emailInput);
+
+  const messageInput = document.createElement("textarea");
+  messageInput.className = "contact__textarea";
+  messageInput.placeholder = "MESSAGE";
+  messageInput.required = true;
+  form.appendChild(messageInput);
+
+  const submitButton = document.createElement("button");
+  submitButton.className = "contact__submit btn btn-primary";
+  submitButton.textContent = "SEND";
+  form.appendChild(submitButton);
+
+  return form;
+}
+
+function createInfo() {
+  const info = document.createElement("div");
+  info.className = "contact__info";
+
+  const phoneListItem = document.createElement("li");
+  phoneListItem.className = "contact__item";
+  const phoneIcon = document.createElement("i");
+  phoneIcon.className = "material-icons contact__icon";
+  phoneIcon.textContent = "phone";
+  phoneListItem.appendChild(phoneIcon);
+  const phoneLink = document.createElement("a");
+  phoneLink.href = "";
+  phoneLink.textContent = "+12 34 56 78";
+  const phoneText = document.createElement("span");
+  phoneText.className = "contact__text";
+  phoneText.appendChild(phoneLink);
+  phoneListItem.appendChild(phoneText);
+
+  const emailListItem = document.createElement("li");
+  emailListItem.className = "contact__item";
+  const emailIcon = document.createElement("i");
+  emailIcon.className = "material-icons contact__icon";
+  emailIcon.textContent = "email";
+  emailListItem.appendChild(emailIcon);
+  const emailLink = document.createElement("a");
+  emailLink.href = "mailto:sakuraisushi@gmail.com";
+  emailLink.textContent = "sakuraisushi@gmail.com";
+  const emailText = document.createElement("span");
+  emailText.className = "contact__text";
+  emailText.appendChild(emailLink);
+  emailListItem.appendChild(emailText);
+
+  const facebookListItem = document.createElement("li");
+  facebookListItem.className = "contact__item";
+  const facebookIcon = document.createElement("i");
+  facebookIcon.className = "material-icons contact__icon";
+  facebookIcon.textContent = "share";
+  facebookListItem.appendChild(facebookIcon);
+  const facebookLink = document.createElement("a");
+  facebookLink.href = "https://www.facebook.com/";
+  facebookLink.target = "_blank";
+  facebookLink.textContent = "Facebook";
+  const facebookText = document.createElement("span");
+  facebookText.className = "contact__text";
+  facebookText.appendChild(facebookLink);
+  facebookListItem.appendChild(facebookText);
+
+  const twitterListItem = document.createElement("li");
+  twitterListItem.className = "contact__item";
+  const twitterIcon = document.createElement("i");
+  twitterIcon.className = "material-icons contact__icon";
+  twitterIcon.textContent = "share";
+  twitterListItem.appendChild(twitterIcon);
+  const twitterLink = document.createElement("a");
+  twitterLink.href = twitterLink.target = "_blank";
+  twitterLink.textContent = "Twitter";
+  const twitterText = document.createElement("span");
+  twitterText.className = "contact__text";
+  twitterText.appendChild(twitterLink);
+  twitterListItem.appendChild(twitterText);
+
+  const instagramListItem = document.createElement("li");
+  instagramListItem.className = "contact__item";
+  const instagramIcon = document.createElement("i");
+  instagramIcon.className = "material-icons contact__icon";
+  instagramIcon.textContent = "share";
+  instagramListItem.appendChild(instagramIcon);
+  const instagramLink = document.createElement("a");
+  instagramLink.href = "#";
+  instagramLink.target = "_blank";
+  instagramLink.textContent = "Instagram";
+  const instagramText = document.createElement("span");
+  instagramText.className = "contact__text";
+  instagramText.appendChild(instagramLink);
+  instagramListItem.appendChild(instagramText);
+
+  const ul = document.createElement("ul");
+  ul.className = "contact__list";
+  ul.appendChild(phoneListItem);
+  ul.appendChild(emailListItem);
+  ul.appendChild(facebookListItem);
+  ul.appendChild(twitterListItem);
+  ul.appendChild(instagramListItem);
+
+  info.appendChild(ul);
+
+  return info;
+}
+
+function createMap() {
+  const map = document.createElement("div");
+  map.className = "map";
+
+  const header = document.createElement("div");
+  header.className = "map__header";
+  header.textContent = "Visit Us!";
+
+  const address = document.createElement("div");
+  address.className = "map__address";
+
+  const addressHeader = document.createElement("div");
+  addressHeader.className = "map__address-header";
+  addressHeader.textContent = "Sukari Sushi";
+
+  const addressText = document.createElement("div");
+  addressText.className = "map__address-text";
+  addressText.textContent = "123 Main Street, City, State";
+
+  address.appendChild(addressHeader);
+  address.appendChild(addressText);
+
+  const mapContainer = document.createElement("div");
+  mapContainer.className = "map__map-container";
+
+  const mapIframe = document.createElement("iframe");
+  mapIframe.id = "map";
+  mapIframe.src =
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.196191148072!2d-71.06196368505134!3d42.35752683823448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3652e2f2c491b%3A0xc4e4b4dd4d3505e5!2sBoston%20Common!5e0!3m2!1sen!2sus!4v1645156402613!5m2!1sen!2sus";
+  mapIframe.frameborder = 0;
+  mapIframe.style.border = "0";
+  mapIframe.style.width = "100%";
+  mapIframe.style.height = "100%";
+  mapIframe.allowfullscreen = true;
+  mapIframe.loading = "lazy";
+
+  mapContainer.appendChild(mapIframe);
+
+  map.appendChild(header);
+  map.appendChild(address);
+  map.appendChild(mapContainer);
+
+  return map;
+}
+
 function contact() {
   const contactSection = document.createElement("section");
   contactSection.className = "contact";
 
   // Append the header
-  contactSection.append((0,_pageLoad__WEBPACK_IMPORTED_MODULE_0__.createHeader)());
+  contactSection.appendChild((0,_pageLoad__WEBPACK_IMPORTED_MODULE_0__.createHeader)());
 
   const header = document.createElement("h1");
   header.className = "contact__header";
   header.textContent = "Contact";
-
   const wrapper = document.createElement("div");
   wrapper.className = "contact__wrapper";
 
-  const form = document.createElement("form");
-  form.className = "contact__form";
-  form.innerHTML = `Have a comment, critique or suggestion? We’d love to hear from you.
-          <input type="text" class="contact__input" id="name" placeholder="NAME" required />
-          <input type="email" class="contact__input" id="email" placeholder="EMAIL" required />
-          <textarea class="contact__textarea" placeholder="MESSAGE" required></textarea>
-          <button class="contact__submit btn btn-primary">SEND</button>`;
+  wrapper.appendChild(createForm());
+  wrapper.appendChild(createInfo());
 
-  const info = document.createElement("div");
-  info.className = "contact__info";
-  info.innerHTML = `
-          <ul class="contact__list">
-            <li class="contact__item">
-              <i class="contact__icon fa fa-phone"></i>
-              <span class="contact__text">
-                <a href="tel:1-212-555-5555">+12 34 56 78</a>
-              </span>
-            </li>
-            <li class="contact__item">
-              <i class="contact__icon fa fa-envelope"></i>
-              <span class="contact__text">
-                <a href="mailto:hitmeup@gmail.com">food@food.co</a>
-              </span>
-            </li>
-          </ul>
-          <ul class="contact__social-media">
-            <li class="contact__social-media-item">
-              <a href="#" target="_blank" class="contact__social-media-link">Twitter
-                <i class="fa fa-twitter"></i>
-              </a>
-            </li>
-            <li class="contact__social-media-item">
-              <a href="#" target="_blank" class="contact__social-media-link">Instagram
-                <i class="fa fa-instagram"></i>
-              </a>
-            </li>
-          </ul>`;
-
-  const map = document.createElement("div");
-  map.className = "map";
-  map.innerHTML = `
-          <div class="map__header">Visit Us!
-            <div class="map__address">
-              <div class="map__address-header">Sukari Sushi
-              </div>
-              <div class="map__address-text">123 Main Street, City, State</div>
-            </div>
-          </div>
-          <div class="map__map-container">
-            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.196191148072!2d-71.06196368505134!3d42.35752683823448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3652e2f2c491b%3A0xc4e4b4dd4d3505e5!2sBoston%20Common!5e0!3m2!1sen!2sus!4v1645156402613!5m2!1sen!2sus"
-              frameborder="0"
-              style="border: 0; width: 100%; height: 100%;"
-        allowfullscreen
-        loading="lazy">
-      </iframe>
-    </div>`;
-
-  wrapper.append(form);
-  wrapper.append(info);
-
-  contactSection.append(header);
-  contactSection.append(wrapper);
-  contactSection.append(map);
+  contactSection.appendChild(header);
+  contactSection.appendChild(wrapper);
+  contactSection.appendChild(createMap());
 
   // Append the footer
-  contactSection.append((0,_pageLoad__WEBPACK_IMPORTED_MODULE_0__.createFooter)());
+  contactSection.appendChild((0,_pageLoad__WEBPACK_IMPORTED_MODULE_0__.createFooter)());
 
   return contactSection;
 }
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (contact);
 
 
