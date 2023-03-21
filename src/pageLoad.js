@@ -14,7 +14,6 @@ export const createHeader = () => {
   const contact = document.createElement("li");
   const contactLink = document.createElement("a");
 
-
   homeLink.href = "#";
   homeLink.textContent = "Home";
   home.classList.add("nav__item");
@@ -52,20 +51,34 @@ export const createHeader = () => {
   ul.append(reservations);
   ul.append(contact);
 
-
-
   nav.classList.add("header__nav", "nav");
   nav.append(ul);
 
+  // Create hamburger menu button
+  const hamburgerBtn = document.createElement("button");
+  hamburgerBtn.classList.add("hamburger-btn");
 
+  const createHamburgerLine = () => {
+    const line = document.createElement("span");
+    line.classList.add("hamburger-line");
+    return line;
+  };
+
+  hamburgerBtn.appendChild(createHamburgerLine());
+  hamburgerBtn.appendChild(createHamburgerLine());
+  hamburgerBtn.appendChild(createHamburgerLine());
+
+  hamburgerBtn.addEventListener("click", () => {
+    ul.classList.toggle("nav__list--open");
+    hamburgerBtn.classList.toggle("hamburger-btn--open");
+  });
 
   header.classList.add("header");
   header.append(nav);
+  header.append(hamburgerBtn);
 
   return header;
 };
-
-
 
 // ---------------------------------------------- MAIN SECTION ---------------------------------------------- //
 export const createMain = () => {

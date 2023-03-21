@@ -28,6 +28,10 @@ ul {
 /* --------------------------------- Header styles ------------------------------------ */
 .header {
   background-color: #0a0603;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
   padding: 1rem;
   width: 100%;
@@ -54,6 +58,9 @@ ul {
   transition: color 0.3s;
 }
 
+.hamburger-btn {
+  display: none;
+}
 
 /* --------------------------------- Main content styles ------------------------------ */
 .main {
@@ -235,7 +242,6 @@ ul {
   font-weight: 900;
 }
 
-
 /* --------------------------------- Contact styles ------------------------------- */
 
 /* Contact us Form */
@@ -398,10 +404,61 @@ footer a[href] {
 /* --------------------------------- MEDIA QUERIES ---------------------------------- */
 /* ---------------------------------               ---------------------------------- */
 
-
-
 /* --------------------------------- Header styles ---------------------------------- */
+@media screen and (max-width: 480px) {
+  .header {
+    height: 55px;
+  }
+  .hamburger-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: inline-block;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+  }
 
+  .hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: all 0.3s;
+  }
+
+  .hamburger-btn--open .hamburger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .hamburger-btn--open .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-btn--open .hamburger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .nav__list {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #0a0603;
+    z-index: 2;
+    line-height: 40px;
+  }
+
+  .nav__list--open {
+    display: flex;
+  }
+}
 
 /* --------------------------------- Footer styles --------------------------------- */
 
@@ -415,10 +472,10 @@ footer a[href] {
   }
 
   .footer-column {
-    flex-basis: calc(50% - .5rem);
+    flex-basis: calc(50% - 0.5rem);
     align-self: center;
     text-align: center;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
     height: 150px;
     width: 150px;
   }
@@ -452,6 +509,5 @@ footer a[href] {
     font-size: 1.1rem;
   }
 }
-
 
 /* --------------------------------- Contact styles -------------------------- */
