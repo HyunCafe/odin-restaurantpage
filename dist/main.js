@@ -157,11 +157,11 @@ const createFooter = () => {
   const column2 = createFooterColumn(
     [
       "Hours",
-      "TUESDAY - THURSDAY",
-      "17:00 – 23:00",
-      "FRIDAY",
-      "12:30 – 17:30, 18:00 – 23:30",
-      "SATURDAY, SUNDAY, MONDAY",
+      "MON - THURS",
+      "17:30 – 22:00",
+      "FRI - SAT",
+      "17:30 – 23:00",
+      "SUN",
       "CLOSED",
     ],
     "footer-column-2"
