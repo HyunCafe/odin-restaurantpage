@@ -16,15 +16,14 @@ __webpack_require__.r(__webpack_exports__);
 
 function reservations() {
   const reservationsSection = document.createElement("section");
-  reservationsSection.className = "reservations";
+  reservationsSection.classList.add("reservations");
 
   // Append the header
   reservationsSection.appendChild((0,_pageLoad__WEBPACK_IMPORTED_MODULE_0__.createHeader)());
 
   // Append the main content
-  const header = document.createElement("h1");
-  header.textContent = "Reservations";
-  reservationsSection.appendChild(header);
+  const reservationsWrapper = document.createElement("div");
+  reservationsWrapper.classList.add("reservations__wrapper");
 
   const reservationsHeader = document.createElement("div");
   reservationsHeader.classList.add("reservations__header");
@@ -32,6 +31,7 @@ function reservations() {
   const reservationsTitle = document.createElement("h1");
   reservationsTitle.classList.add("reservations__title");
   reservationsTitle.textContent = "Reservations";
+  reservationsHeader.appendChild(reservationsTitle);
 
   const reservationsContent = document.createElement("div");
   reservationsContent.classList.add("reservations__content");
@@ -76,8 +76,8 @@ function reservations() {
     checkAvailabilityButton
   );
   reservationsContent.appendChild(reservationsForm);
-  reservationsHeader.appendChild(reservationsTitle);
-  reservationsSection.append(reservationsHeader, reservationsContent);
+  reservationsWrapper.append(reservationsHeader, reservationsContent);
+  reservationsSection.appendChild(reservationsWrapper);
 
   // Append the footer
   const footer = (0,_pageLoad__WEBPACK_IMPORTED_MODULE_0__.createFooter)();
