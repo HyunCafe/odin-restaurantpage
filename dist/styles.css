@@ -531,6 +531,10 @@ footer a[href] {
     padding: 1rem;
     font-size: 1.1rem;
   }
+
+  .reservations__content {
+    margin-bottom: 2em;
+  }
 }
 
 /* --------------------------------- Contact styles -------------------------- */
