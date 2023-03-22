@@ -158,6 +158,7 @@ ul {
   from {
     transform: translateX(-2%);
   }
+
   to {
     transform: translateX(0);
   }
@@ -413,6 +414,7 @@ footer a[href] {
   .header {
     height: 55px;
   }
+
   .hamburger-btn {
     position: absolute;
     top: 1rem;
@@ -510,6 +512,7 @@ footer a[href] {
     background-size: cover;
     background-repeat: no-repeat;
   }
+
   .reservations__title {
     font-size: 2rem;
   }
@@ -531,7 +534,59 @@ footer a[href] {
 }
 
 /* --------------------------------- Contact styles -------------------------- */
+@media screen and (max-width: 480px) {
+  .contact__wrapper {
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+  }
 
+  .contact::before {
+    display: none;
+  }
+
+  .contact__form {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .contact__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact__info {
+    width: 100%;
+  }
+
+  .map__map-container {
+    width: 100%;
+  }
+
+  .contact__wrapper {
+    width: 100%;
+  }
+
+  .contact__input,
+  .contact__textarea {
+    margin: 0.8em 0;
+  }
+
+  .contact__submit {
+    width: 80%;
+  }
+
+  .contact__info {
+    margin-top: 1em;
+    width: 100%;
+  }
+
+  .map__map-container {
+    height: 300px;
+  }
+}
 /* --------------------------------- Footer styles --------------------------------- */
 
 /* Media queries */
@@ -553,6 +608,7 @@ footer a[href] {
     width: 150px;
     line-height: 23px;
   }
+
   .footer-column:nth-child(3),
   .footer-column:nth-child(4),
   .footer-column:nth-child(5) {
