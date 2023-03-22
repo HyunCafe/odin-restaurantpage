@@ -13,6 +13,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
+  min-width: 300px;
 }
 
 a {
@@ -484,7 +485,7 @@ footer a[href] {
 }
 
 /* --------------------------------- Home styles ---------------------------------- */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1000px) {
   .main__title::before {
     top: calc(50% + 50px);
   }
@@ -514,6 +515,14 @@ footer a[href] {
   .staggered-text {
     width: 100%;
     font-size: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .staggered-text {
+    width: 100%;
+    font-size: 0.7rem;
     box-sizing: border-box;
     text-align: center;
   }
