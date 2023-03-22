@@ -176,6 +176,17 @@ function menu() {
     "Grilled A5 Wagyu Beef with Garlic Soy Sauce, Daikon Radish, and Microgreens";
   mainsList.appendChild(mainsItem2);
 
+  // Create the photo section for Mains
+  const mainsPhoto = document.createElement("div");
+  mainsPhoto.className = "menu__section menu__section--photo";
+  menuSection.appendChild(mainsPhoto);
+
+  const mainsPhotoImg = document.createElement("img");
+  mainsPhotoImg.className = "menu__photo";
+  mainsPhotoImg.src = "/src/assets/wagyuMenu.jpg";
+  mainsPhotoImg.alt = "Wagyu Beef Dish Photo";
+  mainsPhoto.appendChild(mainsPhotoImg);
+
   // Create the Intermezzo section
   const intermezzo = document.createElement("div");
   intermezzo.className = "menu__section";
@@ -219,6 +230,17 @@ function menu() {
   dessertsItem2.textContent =
     "Black Sesame Panna Cotta with Raspberry Coulis and Candied Ginger";
   dessertsList.appendChild(dessertsItem2);
+
+  // Create the photo section for Desserts
+  const dessertsPhoto = document.createElement("div");
+  dessertsPhoto.className = "menu__section menu__section--photo";
+  menuSection.appendChild(dessertsPhoto);
+
+  const dessertsPhotoImg = document.createElement("img");
+  dessertsPhotoImg.className = "menu__photo";
+  dessertsPhotoImg.src = "/src/assets/desertMenu.jpg";
+  dessertsPhotoImg.alt = " Dessert Photo";
+  dessertsPhoto.appendChild(dessertsPhotoImg);
 
   // Create the Petit Fours section
   const petitFours = document.createElement("div");
