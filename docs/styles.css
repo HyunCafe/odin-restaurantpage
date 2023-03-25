@@ -319,7 +319,7 @@ ul {
       rgba(0, 0, 0, 1),
       rgba(0, 0, 0, 0)
     ),
-    url("../src/assets/reservations.jpg");
+    url("../docs/assets/reservations.jpg");
   background-size: cover;
   background-position: center;
   justify-content: space-between;
