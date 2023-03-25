@@ -1,4 +1,4 @@
-# odin-restaurantpage
+# odin-restaurantpage (14 weeks into my coding journey)
 Throughout the Odin Restaurant Page project, I focused on implementing best practices by using modularity in my code and setting up the webpack environment to bundle my modules. Additionally, I learned how to effectively use DOM manipulation to dynamically create and switch between different tabs while having everything be mobile responsive while following BEM and DRY. Overall, this project allowed me to showcase my skills in modularity, webpack, and DOM manipulation, demonstrating my ability to create mobile-responsive, dynamic webpages for optimal user experience.
 
 ## Summary of Key Features:
