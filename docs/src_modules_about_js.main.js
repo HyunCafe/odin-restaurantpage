@@ -31,8 +31,8 @@ function about() {
   aboutSection.appendChild(aboutContent);
 
   const aboutImages = [
-    { src: "../docs/assets/about1.jpg", alt: "Bamboo Trees" },
-    { src: "../docs/assets/about2.jpg", alt: "Sushi Chef" },
+    { src: "./assets/about1.jpg", alt: "Bamboo Trees" },
+    { src: "./assets/about2.jpg", alt: "Sushi Chef" },
   ];
 
   const aboutTexts = [

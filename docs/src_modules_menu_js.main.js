@@ -59,7 +59,7 @@ function menu() {
 
   const appetizersPhotoImg = document.createElement("img");
   appetizersPhotoImg.className = "menu__photo";
-  appetizersPhotoImg.src = "../docs/assets/scallopTruffleMenu.jpg";
+  appetizersPhotoImg.src = "./assets/scallopTruffleMenu.jpg";
   appetizersPhotoImg.alt = "Scallop Dish Photo";
   appetizersPhoto.appendChild(appetizersPhotoImg);
 
@@ -161,7 +161,7 @@ function menu() {
   const sushiImg = document.createElement("img");
   sushiImg.className = "menu__photo";
   sushiImg.alt = "Sushi Dish Photo";
-  sushiImg.src = "../docs/assets/sush1Menu.jpg";
+  sushiImg.src = "./assets/sush1Menu.jpg";
   sushiPhoto.appendChild(sushiImg);
 
   // Create the Mains section
@@ -197,7 +197,7 @@ function menu() {
 
   const mainsPhotoImg = document.createElement("img");
   mainsPhotoImg.className = "menu__photo";
-  mainsPhotoImg.src = "../docs/assets/wagyuMenu.jpg";
+  mainsPhotoImg.src = "./assets/wagyuMenu.jpg";
   mainsPhotoImg.alt = "Wagyu Beef Dish Photo";
   mainsPhoto.appendChild(mainsPhotoImg);
 
@@ -252,7 +252,7 @@ function menu() {
 
   const dessertsPhotoImg = document.createElement("img");
   dessertsPhotoImg.className = "menu__photo";
-  dessertsPhotoImg.src = "../docs/assets/desertMenu.jpg";
+  dessertsPhotoImg.src = "./assets/desertMenu.jpg";
   dessertsPhotoImg.alt = " Dessert Photo";
   dessertsPhoto.appendChild(dessertsPhotoImg);
 
@@ -309,7 +309,7 @@ function menu() {
   winePairing.appendChild(drinkPhoto);
 
   const drinkPhotoImg = document.createElement("img");
-  drinkPhotoImg.src = "../docs/assets/drinkMenu.jpg";
+  drinkPhotoImg.src = "./assets/drinkMenu.jpg";
   drinkPhotoImg.alt = "Menu Photo";
   drinkPhotoImg.className = "menu__photo";
   drinkPhoto.appendChild(drinkPhotoImg);

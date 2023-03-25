@@ -7,8 +7,10 @@
     "clear": "rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --mode development --open",
-    "build": "webpack --mode production"
-  },  
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HyunCafe/odin-restaurantpage.git"
@@ -20,6 +22,7 @@
   },
   "homepage": "https://github.com/HyunCafe/odin-restaurantpage#readme",
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "webpack": "^5.76.2",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.13.1"
