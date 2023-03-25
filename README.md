@@ -9,6 +9,9 @@ Modularity through the use of different modules to enhance code reusability
 Responsive design for mobile and tablet devices, including a hamburger menu for easy navigation
 
 ![Project Animation](restaurantproj.gif)
+<p align="center">
+<a href="https://hyuncafe.github.io/odin-restaurantpage/" target="_blank">Live Link</a>
+</p>
 
 ## Project Timeline
 #### Mar 19, 2023
