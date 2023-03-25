@@ -8,6 +8,8 @@ Stagger effect for main section images to create an engaging visual layout
 Modularity through the use of different modules to enhance code reusability
 Responsive design for mobile and tablet devices, including a hamburger menu for easy navigation
 
+![Project Animation](restaurantproj.gif)
+
 ## Project Timeline
 #### Mar 19, 2023
 
