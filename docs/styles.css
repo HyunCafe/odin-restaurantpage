@@ -322,6 +322,7 @@ ul {
     url("./assets/reservations.jpg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   justify-content: space-between;
 }
 
