@@ -336,6 +336,13 @@ ul {
   text-align: center;
 }
 
+.reservations__input[type="date"],
+.reservations__input[type="time"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
 .reservations__title {
   font-size: 2.5rem;
   font-weight: 700;
