@@ -336,13 +336,6 @@ ul {
   text-align: center;
 }
 
-.reservations__input[type="date"],
-.reservations__input[type="time"] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
 .reservations__title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -375,21 +368,6 @@ ul {
   margin-bottom: 0.5rem;
 }
 
-.reservations__input-wrapper {
-  position: relative;
-}
-
-.reservations__icon {
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.2rem;
-  color: #999;
-  pointer-events: none;
-}
-
-
 .reservations__input {
   padding: 1rem;
   border-radius: 0.25rem;
@@ -397,7 +375,9 @@ ul {
   background-color: #fffdf2;
   font-size: 1.2rem;
   color: #555;
+  min-width: 90%; 
 }
+
 
 .reservations__input::placeholder {
   color: #999;

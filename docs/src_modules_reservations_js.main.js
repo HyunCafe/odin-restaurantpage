@@ -12,10 +12,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _pageLoad__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../pageLoad */ "./src/pageLoad.js");
-/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
-
-
-
 
 
 function reservations() {
@@ -47,17 +43,13 @@ function reservations() {
     "Date",
     "date",
     "reservations__input",
-    true,
-    null,
-    "fas fa-calendar"
+    true
   );
   const timeFormGroup = createFormGroup(
     "Time",
     "time",
     "reservations__input",
-    true,
-    null,
-    "fas fa-clock"
+    true
   );
   const guestsFormGroup = createFormGroup(
     "Guests",
@@ -116,17 +108,6 @@ function createFormGroup(
   input.classList.add(inputClass);
   input.required = isRequired;
 
-  // Add Font Awesome icons for date and time input types
-  if (inputType === "date") {
-    const calendarIcon = document.createElement("span");
-    calendarIcon.innerHTML = `<i class="fas fa-calendar-alt"></i>`;
-    formGroup.appendChild(calendarIcon);
-  } else if (inputType === "time") {
-    const clockIcon = document.createElement("span");
-    clockIcon.innerHTML = `<i class="fas fa-clock"></i>`;
-    formGroup.appendChild(clockIcon);
-  }
-
   if (inputType === "number" && minValue) {
     input.setAttribute("min", minValue);
   }
@@ -134,7 +115,6 @@ function createFormGroup(
   formGroup.append(label, input);
   return formGroup;
 }
-
 
 function createButton(buttonText, buttonClass) {
   const button = document.createElement("button");
