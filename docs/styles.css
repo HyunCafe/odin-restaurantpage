@@ -679,6 +679,8 @@ footer a[href] {
     box-sizing: border-box;
     text-align: center;
   }
+  .nav__list a {
+    font-size: 1rem;
 }
 
 /* --------------------------------- Menu styles ---------------------------------- */
