@@ -1,4 +1,7 @@
 import { createHeader, createFooter } from "../pageLoad";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendarAlt, faClock } from "@fortawesome/free-solid-svg-icons";
+
 
 function reservations() {
   const reservationsSection = document.createElement("section");
@@ -29,13 +32,17 @@ function reservations() {
     "Date",
     "date",
     "reservations__input",
-    true
+    true,
+    null,
+    "fas fa-calendar"
   );
   const timeFormGroup = createFormGroup(
     "Time",
     "time",
     "reservations__input",
-    true
+    true,
+    null,
+    "fas fa-clock"
   );
   const guestsFormGroup = createFormGroup(
     "Guests",
@@ -94,6 +101,17 @@ function createFormGroup(
   input.classList.add(inputClass);
   input.required = isRequired;
 
+  // Add Font Awesome icons for date and time input types
+  if (inputType === "date") {
+    const calendarIcon = document.createElement("span");
+    calendarIcon.innerHTML = `<i class="fas fa-calendar-alt"></i>`;
+    formGroup.appendChild(calendarIcon);
+  } else if (inputType === "time") {
+    const clockIcon = document.createElement("span");
+    clockIcon.innerHTML = `<i class="fas fa-clock"></i>`;
+    formGroup.appendChild(clockIcon);
+  }
+
   if (inputType === "number" && minValue) {
     input.setAttribute("min", minValue);
   }
@@ -101,6 +119,7 @@ function createFormGroup(
   formGroup.append(label, input);
   return formGroup;
 }
+
 
 function createButton(buttonText, buttonClass) {
   const button = document.createElement("button");
